@@ -11,7 +11,7 @@
     
 </body>
 </html>
-    <body class="bg-gray-800">
-<h1 class="text-white text-center">TROP EASY DE FAIRE LE DOSSIER LARAVEL</h1>
+    <body class="bg-pink-800">
+<h1 class="text-white text-center">TAIS TOI BENJAMIN</h1>
     </body>
 </html>
