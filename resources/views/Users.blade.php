@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('main')
-    <div class="container w-full md:w-4/5 xl:w-3/5  mx-auto px-2">
+    <div class="container w-full px-2 mx-auto md:w-4/5 xl:w-3/5">
 
 
         <!--Regular Datatables CSS-->
@@ -101,14 +101,18 @@
 
         </style>
         <!--Title-->
-        <h1 class="flex items-center font-sans font-bold break-normal text-indigo-500 px-2 py-8 text-xl md:text-2xl">
+        <h1 class="flex items-center px-2 py-8 font-sans text-xl font-bold text-indigo-500 break-normal md:text-2xl">
             Users
         </h1>
 
 
         <!--Card-->
-        <div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
-
+        <div id='recipients' class="p-8 mt-6 bg-white rounded shadow lg:mt-0">
+            @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <div class="text-red-500">{{ $error }}</div>
+            @endforeach
+        @endif
 
             <table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
                 <thead>
@@ -117,6 +121,7 @@
                         <th data-priority="1">Nom</th>
                         <th data-priority="2">Prenom</th>
                         <th data-priority="3">email</th>
+                        <th>Check</th>
                         <th>Update</th>
                         <th>delete</th>
                     </tr>
@@ -128,7 +133,10 @@
                             <td class="text-center">{{ $user->name }}</td>
                             <td class="text-center">{{ $user->prenom }}</td>
                             <td class="text-center">{{ $user->email }}</td>
-                            <td class="text-center"><a href=""><i class=" fa-solid fa-pencil"></i></a>
+                            <td class="text-center"></td>
+                            <td class="text-center">
+                                
+                                    @include('components.edit')
 </td>
                             <td class="text-center"><a href=""><i class=" fa-solid fa-recycle"></i></a></td>
                         @endforeach

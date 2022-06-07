@@ -22,5 +22,6 @@ Route::get('/test',function(){
     return view('test');
 });
 
-Route::get('users',[UserController::class,'getUsers']);
+Route::get('users',[UserController::class,'getUsers'])->name('users');
+Route::post('users/{id}',[UserController::class,'update'])->whereNumber('id')->name('update');
     
