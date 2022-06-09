@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Roles;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -11,8 +12,10 @@ class UserController extends Controller
     public function getUsers()
     {
         $users=User::all();
+        
         return view('users',[
-            'users'=>$users
+            'users'=>$users,
+            
         ]);
        
     }
@@ -34,5 +37,11 @@ class UserController extends Controller
         $users->$path;
         $users->update();
         return redirect()->route('users');
+    }
+    public function showUser($id){
+        $users=User::find($id);
+        return view('user',[
+            'users'=>$users
+        ]);
     }
 }

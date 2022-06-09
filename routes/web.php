@@ -24,4 +24,5 @@ Route::get('/test',function(){
 
 Route::get('users',[UserController::class,'getUsers'])->name('users');
 Route::post('users/{id}',[UserController::class,'update'])->whereNumber('id')->name('update');
+Route::get('user/{id}',[UserController::class,'showUser'])->whereNumber('id');
     

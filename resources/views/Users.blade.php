@@ -107,7 +107,7 @@
 
 
         <!--Card-->
-        <div id='recipients' class="p-8 mt-6 bg-white rounded shadow lg:mt-0">
+        <div id='recipients' class="p-8 mt-6 bg-white rounded shadow lg:mt-0 w-auto">
             @if ($errors->any())
             @foreach ($errors->all() as $error)
                 <div class="text-red-500">{{ $error }}</div>
@@ -127,20 +127,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($users as $user)
                     <tr>
-                        @foreach ($users as $user)
-                            <td class="text-center">{{ $user->image }}</td>
+                            <td class="text-center">{{ Storage::url($user->avatar)}}</td>
                             <td class="text-center">{{ $user->name }}</td>
                             <td class="text-center">{{ $user->prenom }}</td>
                             <td class="text-center">{{ $user->email }}</td>
-                            <td class="text-center"></td>
+                            <td class="text-center">
+                                <a href="/user/{{$user->id}}"><i class="fa-regular fa-eye"></i></a>
+                            </td>
                             <td class="text-center">
                                 
                                     @include('components.edit')
 </td>
                             <td class="text-center"><a href=""><i class=" fa-solid fa-recycle"></i></a></td>
+                        </tr>
                         @endforeach
-                    </tr>
 
                     <!-- Rest of your data (refer to https://datatables.net/examples/server_side/ for server side processing)-->
 
