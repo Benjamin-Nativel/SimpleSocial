@@ -13,11 +13,12 @@
     <header>
         @include('layouts.header')
     </header>
+
     @yield('main')
 
-    <footer>
-        @include('layouts.footer')
-    </footer>
+   
+        {{-- @include('layouts.footer') --}}
+    
 
 
 
