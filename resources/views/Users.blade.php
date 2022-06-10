@@ -117,7 +117,7 @@
             <table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
                 <thead>
                     <tr>
-                        <th data-priority="4">Avatar</th>
+                        
                         <th data-priority="1">Nom</th>
                         <th data-priority="2">Prenom</th>
                         <th data-priority="3">email</th>
@@ -129,7 +129,7 @@
                 <tbody>
                     @foreach ($users as $user)
                     <tr>
-                            <td class="text-center">{{ Storage::url($user->avatar)}}</td>
+                            
                             <td class="text-center">{{ $user->name }}</td>
                             <td class="text-center">{{ $user->prenom }}</td>
                             <td class="text-center">{{ $user->email }}</td>
