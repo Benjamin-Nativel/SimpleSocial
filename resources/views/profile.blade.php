@@ -5,40 +5,81 @@
 <div class="h-screen p-relative" style="background-color:#e4e4e4;">
     <div class="flex ">
 
-        <header class="h-12 text-gray pt-80">
+        <header class="pt-44">
             <!-- Navbar (left side) -->
             <div style="width: 350px;">
 <div class="fixed h-screen pr-3 overflow-y-auto" style="width: 275px;">
     <!--Logo-->
    
+    <div class="h-screen w-96
+     px-6 border-r ">
+        <div class="h-3/4 flex flex-col ">
+           <h3 class="pl-1 text-sm flex items-center py-2 mb-2 ">
+          
+            <header class="px-5 py-4 text-lg font-bold text-pink-600">
+              Informations personnelles
+              </header>
+             
+           </h3> 
+           <div class="ml-4">
+           <p class="text-lg font-bold text-gray-800 "><i class="fa-solid fa-user-group mb-2 fa-xl text-gray-400 mr-2	"></i> Femme</p>
+           <p class="text-sm text-gray-500 ml-10">Genre </p>
+          <p class="text-lg font-bold mt-2 text-gray-800"> <i class="fa-solid fa-cake-candles fa-xl text-gray-400 mr-2"></i>  27/24/1988</p>
+           <p class="text-sm text-gray-500 mt-4 ml-10">Date de naissance</p>
+           <p class="text-lg font-bold mt-2 text-gray-800"> <i class="fa-solid fa-bowling-ball fa-xl text-gray-400 mr-2"></i> Natation, série, sport, <br> voyage, tatouage, roadtrip</p>
+           <p class="text-sm text-gray-500 mt-4 ml-10">Centres d'înterêt</p>
+           </div>
+           <h3 class="pl-1 text-sm flex items-center py-2 mb-2 ">
+              
 
+              <card class="">
 
+                <header class="px-5 py-4 text-xl font-bold text-pink-600">
+                Amis
+                </header>
+            
+                <main class="px-5">
+            
+                  <content class="grid grid-cols-6">
+            
+                    <div class="">
+                      <img src="https://picsum.photos/200/200" class="w-8 h-8 rounded-full">
+                    </div>
+            
+                    <div class="flex flex-col col-span-3 px-1 font-semibold">
+                      <div class="text-sm"> Sangwa Albine </div>
+                      <div class="font-light text-gray-700 text-xm"> En ligne </div>
+                    </div>
+            
+                  </content>
+            
+            
+                     <content class="grid grid-cols-6 mt-6">
+            
+                    <div class="">
+                      <img src="https://picsum.photos/200/200?i=200" class="w-8 h-8 rounded-full">
+                    </div>
+            
+                    <div class="flex flex-col col-span-3 px-1 font-semibold ">
+                      <div class="text-sm"> Mbonyintege </div>
+                      <div class="font-light text-gray-700 text-xm"> En ligne</div>
+                    </div>
+            
+                  
+            
+                  </content>
+            
+                
+            
+                </main>
+            
+              </card>
+           </h3>
+        </div>
+    </div> 
+    
     <!-- Nav-->
-    <nav class="px-2 mt-30">
-        <a href="#" class="flex items-center px-2 py-2 mt-1 text-base leading-6 group font-semibo hover:text-blue-300">
-            <svg class="w-6 h-6 mr-4 " stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10M9 21h6"></path>
-            </svg>
-            Informations personnelles
-        </a>
-        <a href="#" class="flex items-center px-2 py-2 mt-1 text-base font-semibold leading-6 rounded-full group hover:text-blue-300">
-            <svg class="w-6 h-6 mr-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
-            </svg>
-
-            Amis
-        </a>
-        <a href="#" class="flex items-center px-2 py-2 mt-1 text-base font-medium leading-6 rounded-full group hover:text-blue-300">
-            <svg class="w-6 h-6 mr-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
-                <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
-                </path>
-            </svg>
-            Notifications
-        </a>
-        
-
-      
-    </nav>
+  
    
         </header>
 
@@ -47,31 +88,11 @@
                 <section class="border border-white w-2000 border-y-0">
                     <!--Content (Center)-->
                         <!-- Nav back-->
-<div>
-<div class="flex justify-start">
-    <div class="px-4 py-2 mx-2">
-        <a href="" class="float-right text-2xl font-medium text-blue-400 rounded-full hover:bg-pink-800 hover:text-blue-300">
-            <svg class="w-6 h-6 m-2" fill="currentColor" viewBox="0 0 24 24">
-                <g>
-                    <path d="M20 11H7.414l4.293-4.293c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0l-6 6c-.39.39-.39 1.023 0 1.414l6 6c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L7.414 13H20c.553 0 1-.447 1-1s-.447-1-1-1z">
-                    </path>
-                </g>
-            </svg>
-        </a>
-    </div>
-    <div class="mx-2">
-        <h2 class="mb-0 text-xl font-bold text-gray">Lizzo</h2>
-        <p class="w-48 mb-0 text-xs text-gray-400">9,416 Tweets</p>
-    </div>
-</div>
-
-<hr class="border-white">
-</div>
 
 <!-- User card-->
 <div>
-<div class="w-full bg-center bg-no-repeat bg-cover" style=" background-image: url(https://cache.marieclaire.fr/data/photo/w1200_h630_ci/61/coucher-de-soleil.jpg);">
-    <img class="w-full h-full opacity-0" src="https://cache.marieclaire.fr/data/photo/w1200_h630_ci/61/coucher-de-soleil.jpg" alt="">
+<div class=" bg-center bg-no-repeat bg-cover w-full-height" style=" background-image: url(https://cache.marieclaire.fr/data/photo/w1200_h630_ci/61/coucher-de-soleil.jpg);">
+    <img class="w-full h-full opacity-0 " src="https://cache.marieclaire.fr/data/photo/w1200_h630_ci/61/coucher-de-soleil.jpg" alt="">
 </div>
 <div class="p-50">
     <div class="relative flex w-full">
@@ -79,7 +100,7 @@
         <div class="flex justify-center flex-1">
             <div style="margin-top: -6rem;">
                 <div style="height:20rem; width:20rem;" class="relative rounded-full ml-16 justify-items-center md avatar">
-                    <img style="height:20rem; width:20rem;" class="relative border-4 border-white rounded-full md" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/LizzoBrixt06Nov19-10_%2849216792848%29_%28cropped%29.jpg" alt="">
+                    <img style="height:20rem; width:20rem;" class="relative border-4 border-white rounded-full w-16 md:w-32 lg:w-48" src="https://m.media-amazon.com/images/I/41DlTmVSO7L.jpg" alt="">
                     <div class="absolute"></div>
                 </div>
             </div>
@@ -116,16 +137,18 @@
     <a href="#" class="flex-shrink-0 block group">
         <div class="flex items-center">
             <div>
-                <img class="inline-block w-10 h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1121328878142853120/e-rpjoJi_bigger.png" alt="">
-            </div>
-            <div class="ml-3">
-                <p class="text-base font-medium leading-6 text-gray">
-                    Sonali Hirave
-                    <span class="text-sm font-medium leading-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-pink">
-                        @ShonaDesign  . 16 April
-                    </span>
-                </p>
-            </div>
+                <img class="inline-block w-10 h-10 rounded-full" src="https://m.media-amazon.com/images/I/41DlTmVSO7L.jpg" alt="">
+              </div>
+                <div class="ml-3">
+                  <p class="">
+               
+                      <span class="text-sm leading-5 font-medium text-gray-700 group-hover:text-gray-300 transition ease-in-out duration-150">
+                          Lizzo
+                      </span>
+                  </p>
+              </div>
+            
+           
         </div>
     </a>
 </div>
@@ -187,81 +210,7 @@ I'm sure those windmills will keep them cool. Who am I making this out to? Yes, 
         </li>
                 <li>
                 <!--second tweet-->
-<article class="transition ease-in-out bg-slate-100 duration-350">
-<div class="flex flex-shrink-0 p-4 pb-0">
-    <a href="#" class="flex-shrink-0 block group">
-        <div class="flex items-center">
-            <div>
-                <img class="inline-block w-10 h-10 rounded-full" src="https://pbs.twimg.com/profile_images/1121328878142853120/e-rpjoJi_bigger.png" alt="">
-            </div>
-            <div class="ml-3">
-                <p class="text-base font-medium leading-6 text-gray">
-                    Sonali Hirave
-                    <span class="text-sm font-medium leading-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-gray-300">
-                        @ShonaDesign  . 16 April
-                    </span>
-                </p>
-            </div>
-        </div>
-    </a>
-</div>
 
-
-<div class="pl-16">
-    <p class="flex-shrink text-base font-medium text-white width-auto">
-        Day 07 of the challenge <a href="#" class="text-blue-400">#100DaysOfCode</a>
-        I was wondering what I can do with <a href="#" class="text-blue-400">#tailwindcss</a>, so just started building
-        Twitter UI using Tailwind and so far it looks so promising. I will post my code after completion.
-        [07/100]
-        <a href="#" class="text-blue-400"> #WomenWhoCode #CodeNewbie</a>
-    </p>
-
-    <div class="pt-3 pr-6 md:flex-shrink">
-        <div class="w-full h-64 bg-center bg-no-repeat bg-cover rounded-lg" style="height: 200px; background-image: url(https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=448&amp;q=80);">
-        <img class="w-full h-full opacity-0" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=448&amp;q=80" alt="">
-    </div>
-    </div>
-
-
-    <div class="flex items-center py-4">
-        <div class="flex items-center flex-1 text-xs text-white text-gray-400 transition ease-in-out hover:text-blue-400 duration-350">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-            <g>
-              <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"></path>
-            </g>
-          </svg>
-          12.3 k
-        </div>
-        <div class="flex items-center flex-1 text-xs text-white text-gray-400 transition ease-in-out hover:text-green-400 duration-350">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-            <g>
-              <path d="M23.77 15.67c-.292-.293-.767-.293-1.06 0l-2.22 2.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414 0-.75.336-.75.75s.336.75.75.75h5.85c1.24 0 2.25 1.01 2.25 2.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06 0s-.294.768 0 1.06l3.5 3.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767 0-1.06zm-10.66 3.28H7.26c-1.24 0-2.25-1.01-2.25-2.25V6.46l2.22 2.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768 0-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06 0l-3.5 3.5c-.294.292-.294.767 0 1.06s.767.293 1.06 0l2.22-2.22V16.7c0 2.068 1.683 3.75 3.75 3.75h5.85c.414 0 .75-.336.75-.75s-.337-.75-.75-.75z"></path>
-            </g>
-          </svg>
-          14 k
-        </div>
-        <div class="flex items-center flex-1 text-xs text-white text-gray-400 transition ease-in-out hover:text-red-600 duration-350">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-            <g>
-              <path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12zM7.354 4.225c-2.08 0-3.903 1.988-3.903 4.255 0 5.74 7.034 11.596 8.55 11.658 1.518-.062 8.55-5.917 8.55-11.658 0-2.267-1.823-4.255-3.903-4.255-2.528 0-3.94 2.936-3.952 2.965-.23.562-1.156.562-1.387 0-.014-.03-1.425-2.965-3.954-2.965z"></path>
-            </g>
-          </svg>
-          14 k
-        </div>
-        <div class="flex items-center flex-1 text-xs text-white text-gray-400 transition ease-in-out hover:text-blue-400 duration-350">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
-            <g>
-              <path d="M17.53 7.47l-5-5c-.293-.293-.768-.293-1.06 0l-5 5c-.294.293-.294.768 0 1.06s.767.294 1.06 0l3.72-3.72V15c0 .414.336.75.75.75s.75-.336.75-.75V4.81l3.72 3.72c.146.147.338.22.53.22s.384-.072.53-.22c.293-.293.293-.767 0-1.06z"></path>
-              <path d="M19.708 21.944H4.292C3.028 21.944 2 20.916 2 19.652V14c0-.414.336-.75.75-.75s.75.336.75.75v5.652c0 .437.355.792.792.792h15.416c.437 0 .792-.355.792-.792V14c0-.414.336-.75.75-.75s.75.336.75.75v5.652c0 1.264-1.028 2.292-2.292 2.292z"></path>
-            </g>
-          </svg>
-        </div>
-      </div>
-
-</div>
-<hr class="border-white">
-</article>
-        </li>
                 <li>
                 <!--second tweet-->
 
@@ -298,7 +247,7 @@ I'm sure those windmills will keep them cool. Who am I making this out to? Yes, 
     </div>
 
     <div class="col-span-2 py-2 justify-self-end">
-      <button class="px-4 py-1 text-xs font-semibold text-blue-500 rounded-full text-md">
+      <button class="px-4 py-1 text-xs font-semibold text-pink-600 rounded-full text-md">
         Ajouter en ami
       </button>
     </div>
@@ -318,7 +267,7 @@ I'm sure those windmills will keep them cool. Who am I making this out to? Yes, 
     </div>
 
     <div class="col-span-2 py-2 justify-self-end">
-      <button class="px-4 py-1 text-xs font-semibold text-blue-500 rounded-full text-md">
+      <button class="px-4 py-1 text-xs font-semibold text-pink-500 rounded-full text-md">
         Ajouter en ami
       </button>
     </div>
@@ -337,7 +286,7 @@ I'm sure those windmills will keep them cool. Who am I making this out to? Yes, 
     </div>
 
     <div class="col-span-2 py-2 justify-self-end">
-      <button class="px-4 py-1 text-xs font-semibold text-blue-500 rounded-full text-md">
+      <button class="px-4 py-1 text-xs font-semibold text-pink-500 rounded-full text-md">
         Ajouter en ami
       </button>
     </div>
@@ -356,7 +305,7 @@ I'm sure those windmills will keep them cool. Who am I making this out to? Yes, 
     </div>
 
     <div class="col-span-2 py-2 justify-self-end">
-      <button class="px-4 py-1 text-xs font-semibold text-blue-500 rounded-full text-md">
+      <button class="px-4 py-1 text-xs font-semibold text-pink-500 rounded-full text-md">
         Ajouter en ami
       </button>
     </div>
