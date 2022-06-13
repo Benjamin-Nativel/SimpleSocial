@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\User;
+use App\models\Roles;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -18,22 +19,24 @@ class Auth
     public function handle(Request $request, Closure $next)
     {
 
-      // dd($request->session());
-        if($request->session()->has('user')){
-          $data = Auth::user()->name;
-          $utils=User::with('roles')->get()->where('name' ,'=', $data);
 
-          foreach ($utils as $util) {
+      
+      if($request->session()->has('user')){
+        $user= Auth::user()->name;//recuperer chant unique
+        $user=User::with('roles')->get()->where('name' ,'=', $user)->first();
 
-          foreach ($util->roles as $role) {
+    
 
-          if ($role->rolename ==='ADMIN'){ 
+        foreach ($user->roles as $role) {
 
-        return $next($request);
-      }else {return redirect()->route('livres')->with('status', "vous n'avez pas les droits d'accès du statut administrateur !");}
-    } } 
-     } else{
-       return redirect()->route('/');
-    }
-    }
+        if ($role->label ==='ADMIN'){ 
+
+      return $next($request);
+    }else {return redirect()->route('/')->with('status', "vous n'avez pas les droits d'accès du statut administrateur !");}
+  } 
+   } else{
+     return redirect()->route('/register');
   }
+  }
+}
+  

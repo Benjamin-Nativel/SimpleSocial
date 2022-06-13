@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Roles extends Model
+class Commentaires extends Model
 {
     use HasFactory;
-    public function users()
-    {
-        return $this->belongsToMany(Roles::class,'users_roles','id_users','id_roles');
+
+    public function post(){
+        return $this->belongsTo(post::class,'id_post');
     }
 }
