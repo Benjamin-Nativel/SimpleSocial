@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,10 @@ Route::get('/test',function(){
     return view('test');
 });
 
+Route::get('users',[UserController::class,'getUsers'])->name('users');
+Route::post('users/{id}',[UserController::class,'update'])->whereNumber('id')->name('update');
+Route::get('user/{id}',[UserController::class,'showUser'])->whereNumber('id');
+    
 route::get('/test2',function(){
     return view('test2');
 });

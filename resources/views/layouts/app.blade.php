@@ -9,7 +9,6 @@
     <link href="{{ asset('./css/app.css') }}" rel="stylesheet" />
     <title>Document</title>
 </head>
-
 <body class="">
     <header>
         @include('layouts.header')
