@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Comment;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-class UserSeeder extends Seeder
+
+class CommentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,9 +16,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()
-        ->count(15)
-        
-        ->create();
+        Comment::factory()
+        ->count(10)
+         ->create([
+                'commentaires' => Str::random(250),
+                'id_post' =>int::random(0, 14),
+               
+            ]);
     }
 }

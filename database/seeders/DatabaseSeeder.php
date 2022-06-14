@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use App\Models\Roles;
 use App\Models\User;
 use Database\Factories\RoleFactory;
@@ -19,19 +20,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(10)->create();
+         User::factory(5)->create();
 
-        User::factory()->create([
-            'name' => Str::random(10),
-            'prenom' => Str::random(10),
-            'avatar' => Str::random(10),
-            'age' => date('Y-m-d'),
-            'email' => Str::random(10).'@gmail.com',
-            'password' => Hash::make('password'),
-            
-        ]);
+         Post::factory()->count(5)->create();
 
-        
-        
+        // Comment::factory()->count(3)->create();
     }
 }
