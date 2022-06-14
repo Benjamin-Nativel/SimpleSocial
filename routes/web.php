@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -60,3 +62,7 @@ Route::get('/comment',function(){
 }); 
 
 Route::post('/comment', [CommentairesController::class,'add']);
+
+
+
+// Route::get('/welcome'),[]

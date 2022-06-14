@@ -10,10 +10,11 @@ class PostController extends Controller
     function getAllUser()
 {
     // Selectionner des données
-   $User = User::wherenotin('id',[])->inRandomOrder()->limit(5)->get();
+
+   $Users = User::wherenotin('id',[])->inRandomOrder()->limit(5)->get();
 
     return view('/suggestion',[
-        'user' => $User,
+        'users' => $Users,
        
     
     
