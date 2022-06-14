@@ -61,4 +61,16 @@ class User extends Authenticatable
      public function Interest(){
         return $this->belongsTo(Interest::class,'interest_users','id_users','id_interest');
      }
+
+     public function amis()
+     {
+         return $this->belongsToMany(User::class, 'Users_amis', 'users_id', 'amis_id')
+             ->withPivot('accepted')
+             ->withTimestamps();
+     }
+
+
+
+
+
 }

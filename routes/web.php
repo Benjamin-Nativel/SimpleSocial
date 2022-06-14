@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentairesController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\User_amisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,3 +44,6 @@ Route::get('/comment',function(){
 }); 
 
 Route::post('/comment', [CommentairesController::class,'add']);
+
+Route::get('/amis',[User_amisController::class, 'showamis'])->name('amis');
+Route::post('/amis/store',[User_amiscontroller::class, 'storeamis'])->name('amis.store');
