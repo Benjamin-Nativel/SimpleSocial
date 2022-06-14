@@ -1,7 +1,13 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+=======
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CommentairesController;
+use App\Http\Controllers\PostController;
+>>>>>>> de41bcdf5d1af72334e828b3c69287a3cb5eeccc
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
 
-Route::get('/', function () {
+
+*/Route::get('/', function () {
     return view('welcome');
 });
 
@@ -34,3 +40,24 @@ Route::get('user/{id}',[UserController::class,'showUser'])->whereNumber('id');
 route::get('/test2',function(){
     return view('test2');
 });
+}); 
+
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/register', [AuthController::class, 'getRegister'])->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+
+Route::get('/login', [AuthController::class, 'getLogin'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('auth:ADMIN');
+
+
+Route::get('/suggestion', [PostController::class, 'getAllUser'])->name('suggestion');
+
+Route::get('/comment',function(){
+    return view('comment');
+}); 
+
+Route::post('/comment', [CommentairesController::class,'add']);
