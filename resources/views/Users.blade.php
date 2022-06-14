@@ -107,7 +107,7 @@
 
 
         <!--Card-->
-        <div id='recipients' class="p-8 mt-6 bg-white rounded shadow lg:mt-0 w-auto">
+        <div id='recipients' class="w-auto p-8 mt-6 bg-white rounded shadow lg:mt-0">
             @if ($errors->any())
             @foreach ($errors->all() as $error)
                 <div class="text-red-500">{{ $error }}</div>
@@ -121,9 +121,8 @@
                         <th data-priority="1">Nom</th>
                         <th data-priority="2">Prenom</th>
                         <th data-priority="3">email</th>
-                        <th>Check</th>
-                        <th>Update</th>
-                        <th>delete</th>
+                        <th>Actions</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -135,12 +134,10 @@
                             <td class="text-center">{{ $user->email }}</td>
                             <td class="text-center">
                                 <a href="/user/{{$user->id}}"><i class="fa-regular fa-eye"></i></a>
-                            </td>
-                            <td class="text-center">
+                        
                                 
                                     @include('components.edit')
-</td>
-                            <td class="text-center"><a href=""><i class=" fa-solid fa-recycle"></i></a></td>
+                            <a href=""><i class=" fa-solid fa-recycle"></i></a></td>
                         </tr>
                         @endforeach
 
