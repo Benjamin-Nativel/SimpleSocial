@@ -1,13 +1,10 @@
 <?php
 
-<<<<<<< HEAD
-use App\Http\Controllers\PostController;
+
 use App\Http\Controllers\UserController;
-=======
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentairesController;
 use App\Http\Controllers\PostController;
->>>>>>> de41bcdf5d1af72334e828b3c69287a3cb5eeccc
 use Illuminate\Support\Facades\Route;
 
 
@@ -40,7 +37,7 @@ Route::get('user/{id}',[UserController::class,'showUser'])->whereNumber('id');
 route::get('/test2',function(){
     return view('test2');
 });
-}); 
+
 
 
 
