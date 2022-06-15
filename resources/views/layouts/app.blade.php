@@ -12,16 +12,14 @@
 </head>
 
 <body>
-    <header>
-        @include('layouts.header')
-    </header>
+    
+@include('layouts.header')
+    
+<main>
+@yield('main')
+</main>
 
-
-    @yield('main')
-
-    <footer>
-        @include('layouts.footer')
-    </footer>
+@include('layouts.footer')
 
 
 </body>
