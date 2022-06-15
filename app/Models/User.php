@@ -41,9 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     public function roles()
     {
-        return $this->belongsToMany(Roles::class, 'users_roles', 'id_users', 'id_roles');
+        return $this->belongsToMany(Roles::class,'users_roles','id_users','id_roles');
     }
 
     public function isAdmin() {
@@ -57,19 +58,7 @@ class User extends Authenticatable
      public function posts(){
         return $this->hasMany(Post::class,'id_users','id');
      }
-     public function Interest(){
-        return $this->belongsTo(Interest::class,'interest_users','id_users','id_interest');
+     public function interests(){
+        return $this->belongsToMany(Interest::class,'interest_users','id_users','id_interest');
      }
-
-     public function amis()
-     {
-         return $this->belongsToMany(User::class, 'Users_amis', 'users_id', 'amis_id')
-             ->withPivot('accepted')
-             ->withTimestamps();
-     }
-
-
-
-
-
 }

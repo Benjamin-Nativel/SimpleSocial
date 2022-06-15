@@ -21,22 +21,21 @@ class Auth
 
 
       
-      if($request->session()->has('user')){
-        $user= Auth::user()->name;//recuperer chant unique
-        $user=User::with('roles')->get()->where('name' ,'=', $user)->first();
+  //     if($request->session()->has('user')){
+  //       $user= Auth::User->name;//recuperer chant unique
+  //       $user=User::with('roles')->get()->where('name' ,'=', $user)->first();
 
     
 
-        foreach ($user->roles as $role) {
+  //       foreach ($user->roles as $role) {
 
-        if ($role->label ==='ADMIN'){ 
+  //       if ($role->label ==='ADMIN'){ 
 
-      return $next($request);
-    }else {return redirect()->route('/')->with('status', "vous n'avez pas les droits d'accès du statut administrateur !");}
-  } 
-   } else{
-     return redirect()->route('/register');
-  }
-  }
-}
-  
+  //     return $next($request);
+  //   }else {return redirect()->route('/')->with('status', "vous n'avez pas les droits d'accès du statut administrateur !");}
+  // } 
+  //  } else{
+  //    return redirect()->route('/register');
+  // }
+  // }
+}}

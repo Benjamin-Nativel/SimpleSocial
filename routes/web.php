@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\User_amisController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,7 +54,7 @@ Route::get('/register', [AuthController::class, 'getRegister'])->name('register'
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
 Route::get('/login', [AuthController::class, 'getLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('auth:ADMIN');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 
 Route::get('/', [PostController::class, 'getAllUser'])->name('suggestion');
