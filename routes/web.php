@@ -53,7 +53,7 @@ Route::post('/comment', [CommentairesController::class,'add']);
 
 Route::get('/amis',[User_amisController::class, 'showamis'])->name('amis');
 Route::post('/amis/store',[User_amiscontroller::class, 'storeamis'])->name('amis.store');
-});
+
 
 Route::get('interets', [interestController::class, 'getAll'] );
 
