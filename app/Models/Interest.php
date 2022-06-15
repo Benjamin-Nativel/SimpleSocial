@@ -11,8 +11,8 @@ class Interest extends Model
 
     protected $table='interest';
 
-    public function Int_user()
+    public function int_users()
     {
-        return $this->belongsTo(User::class,'interest_users','id_users','id_interest');
+        return $this->belongsToMany(User::class,'interest_users', 'id_interest','id_users');
     }
-}
+}       

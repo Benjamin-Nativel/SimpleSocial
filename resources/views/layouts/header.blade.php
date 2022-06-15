@@ -1,17 +1,19 @@
 <!-- follow me on twitter @asad_codes -->
 
-<div class="pb-5 flex flex-wrap place-items-center">
+
+<div class="flex flex-wrap pb-5 place-items-center">
     <section class="relative mx-auto">
         <!-- navbar -->
-      <nav class="flex justify-between w-screen text-white bg-gradient-to-l from-orange-300 to-rose-500">
-        <div class="flex items-center w-full px-0 py-6 xl:px-12">
-          <a class="text-3xl font-bold font-heading" href="#">
-            <!-- <img class="h-9" src="logo.png" alt="logo"> -->
-            Yes
-          </a>
-          <!-- Nav Links -->
-          <ul class="px-4 mx-20 space-x-12 font-semibold xl:w-96 md:flex font-heading">
-            <div class="relative text-gray-600">
+            
+        <nav class="flex justify-between w-screen text-white bg-gradient-to-l from-orange-300 to-rose-500">
+          <div class="flex items-center w-full px-0 py-6 xl:px-12">
+            <a class="text-3xl font-bold font-heading" href="#">
+              <!-- <img class="h-9" src="logo.png" alt="logo"> -->
+              Yes
+            </a>
+            <!-- Nav Links -->
+            <ul class="px-4 mx-20 space-x-12 font-semibold xl:w-96 md:flex font-heading">
+              <div class="relative text-gray-600">
                 <input type="search" name="search" placeholder="Search" class="w-10 h-10 px-0 pr-40 text-sm bg-white rounded-full xl:w-96 focus:outline-none">
                 <button type="submit" class="absolute top-0 right-0 mt-3 mr-4">
                   <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
@@ -19,33 +21,34 @@
                   </svg>
                 </button>
               </div>
-          </ul>
-          <!-- Header Icons -->
-          <div class="flex items-center space-x-5 md:ml-auto xl:flex">
-            <a class="hover:text-gray-200 " href="#">
+            </ul>
+            <!-- Header Icons -->
+            <div class="flex items-center space-x-5 md:ml-auto xl:flex">
+              <a class="hover:text-gray-200 " href="#">
                 <i class="fa-solid fa-user-group fa-2xl text-fuchsia-500"></i>
-            </a>
-            <a class="flex items-center hover:text-gray-200" href="#">
-                <i class="fa-solid fa-bell fa-2xl text-yellow-200"></i>
-            </a>
-            <!-- Sign In / Register      -->
-            <a class="flex items-center hover:text-gray-200" href="#">
+              </a>
+              <a class="flex items-center hover:text-gray-200" href="#">
+                <i class="text-yellow-200 fa-solid fa-bell fa-2xl"></i>
+              </a>
+              <!-- Sign In / Register      -->
+              <a class="flex items-center hover:text-gray-200" href="#">
                 <i class="fa-solid fa-paper-plane fa-2xl"></i>
+              </a>
+              
+            </div>
+          </div>
+          <!-- Responsive navbar -->
+          
+          
+        </section>
+      </div>
+      {{-- <!-- Does this resource worth a follow? -->
+        <div class="absolute bottom-0 right-0 z-10 mb-4 mr-4">
+          <div>
+            <a title="Follow me on twitter" href="https://www.twitter.com/asad_codes" target="_blank" class="block w-16 h-16 transition-all transform rounded-full shadow hover:shadow-lg hover:scale-110 hover:rotate-12">
+              <img class="object-cover object-center w-full h-full rounded-full" src="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2019/12/twitter-logo.jpg"/>
             </a>
-            
           </div>
         </div>
-        <!-- Responsive navbar -->
-       
-      
-    </section>
-  </div>
-  {{-- <!-- Does this resource worth a follow? -->
-  <div class="absolute bottom-0 right-0 z-10 mb-4 mr-4">
-      <div>
-          <a title="Follow me on twitter" href="https://www.twitter.com/asad_codes" target="_blank" class="block w-16 h-16 transition-all transform rounded-full shadow hover:shadow-lg hover:scale-110 hover:rotate-12">
-              <img class="object-cover object-center w-full h-full rounded-full" src="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2019/12/twitter-logo.jpg"/>
-          </a>
-      </div>
-  </div>
-  --}}
+        --}}
+        
