@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\User_amisController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,3 +67,5 @@ Route::post('/comment', [CommentairesController::class,'add']);
 
 
 // Route::get('/welcome'),[]
+Route::get('/amis',[User_amisController::class, 'showamis'])->name('amis');
+Route::post('/amis/store',[User_amiscontroller::class, 'storeamis'])->name('amis.store');

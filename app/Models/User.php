@@ -45,4 +45,31 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Roles::class, 'users_roles', 'id_users', 'id_roles');
     }
+
+    public function isAdmin() {
+        return $this->role === 'admin';
+     }
+     public function isUser() {
+        return $this->role === 'util';
+     }
+
+
+     public function posts(){
+        return $this->hasMany(Post::class,'id_users','id');
+     }
+     public function Interest(){
+        return $this->belongsTo(Interest::class,'interest_users','id_users','id_interest');
+     }
+
+     public function amis()
+     {
+         return $this->belongsToMany(User::class, 'Users_amis', 'users_id', 'amis_id')
+             ->withPivot('accepted')
+             ->withTimestamps();
+     }
+
+
+
+
+
 }
