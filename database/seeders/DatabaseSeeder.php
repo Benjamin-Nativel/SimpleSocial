@@ -7,6 +7,8 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,6 +23,6 @@ class DatabaseSeeder extends Seeder
 
          Post::factory()->count(5)->create();
 
-        Comment::factory()->count(3)->create();
+        // Comment::factory()->count(3)->create();
     }
 }

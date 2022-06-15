@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/59ecaaffaa.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>simplesocial</title>
+    <link href="{{ asset('./css/app.css') }}" rel="stylesheet" />
+    <title>Document</title>
 </head>
+<body class="">
+    <header>
+        @include('layouts.header')
+    </header>
 
-<body>
-    
-@include('layouts.header')
-    
-<main>
-@yield('main')
-</main>
+    @yield('main')
 
-@include('layouts.footer')
+   
+        {{-- @include('layouts.footer') --}}
+    
+
 
 
 </body>

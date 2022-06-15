@@ -1,11 +1,14 @@
 <?php
 
+
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentairesController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\User_amisController;
 use App\Http\Controllers\interestController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +30,21 @@ Route::get('/interets', function () {
 });
 
 
+Route::get('/profile',function(){
+    return view('profile');
+});
 Route::get('/test',function(){
     return view('test');
-}); 
+});
+
+Route::get('users',[UserController::class,'getUsers'])->name('users');
+Route::post('users/{id}',[UserController::class,'update'])->whereNumber('id')->name('update');
+Route::get('user/{id}',[UserController::class,'showUser'])->whereNumber('id');
+    
+route::get('/test2',function(){
+    return view('test2');
+});
+
 
 
 
@@ -40,7 +55,7 @@ Route::get('/register', [AuthController::class, 'getRegister'])->name('register'
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
 Route::get('/login', [AuthController::class, 'getLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('auth:ADMIN');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 
 Route::get('/suggestion', [PostController::class, 'getAllUser'])->name('suggestion');
