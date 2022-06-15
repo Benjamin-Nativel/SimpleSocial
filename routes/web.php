@@ -1,11 +1,11 @@
 <?php
 
-
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CommentairesController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\interestController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\User_amisController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -39,7 +39,7 @@ Route::get('/test',function(){
 Route::get('users',[UserController::class,'getUsers'])->name('users');
 Route::post('users/{id}',[UserController::class,'update'])->whereNumber('id')->name('update');
 Route::get('user/{id}',[UserController::class,'showUser'])->whereNumber('id');
-    
+
 route::get('/test2',function(){
     return view('test2');
 });
@@ -56,6 +56,12 @@ Route::delete('interets/{interet}', [InterestController::class, 'delete'])->name
 
 
 
+Route::get('roles',[RoleController::class,'getRoles'])->name('roles');
+
+Route::get('role/{id}',[RoleController::class,'showRole'])->whereNumber('id');
+
+Route::post('roles/{id}',[RoleController::class,'update'])->whereNumber('id')->name('update');
+ 
 
 
 
@@ -70,7 +76,8 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/suggestion', [PostController::class, 'getAllUser'])->name('suggestion');
+Route::get('/', [PostController::class, 'getAllUser'])->name('suggestion');
+
 
 Route::get('/comment',function(){
     return view('comment');
@@ -81,4 +88,10 @@ Route::post('/comment', [CommentairesController::class,'add']);
 
 
 
+// Route::get('/welcome'),[]
+Route::get('/amis',[User_amisController::class, 'showamis'])->name('amis');
+
+Route::post('/amis/store',[User_amiscontroller::class, 'storeamis'])->name('amis.store');
+
+// Route::get('/{id}',[PostController::class, 'getProfile'])->whereNumber('id');
 

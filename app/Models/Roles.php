@@ -13,4 +13,10 @@ class Roles extends Model
     {
         return $this->belongsToMany(User::class, 'users_roles', 'id_roles', 'id_users');
     }
+
+    // public function user(){
+
+    //     return $this->belongsTo(User::class, 'id_users');
+    
+    //   }
 }
