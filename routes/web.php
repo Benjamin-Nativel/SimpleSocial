@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentairesController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\interestController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,6 +27,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/profile',function(){
     return view('profile');
 });
+Route::get('/interets', function () {
+    return view('interets');
+});
+
+
 Route::get('/test',function(){
     return view('test');
 });
@@ -37,6 +43,18 @@ Route::get('user/{id}',[UserController::class,'showUser'])->whereNumber('id');
 route::get('/test2',function(){
     return view('test2');
 });
+Route::get('interets', [interestController::class, 'getAll'] );
+
+Route::get('read/{id}', [interestController::class, 'show']) ->wherenumber('id')->name('read');
+
+Route::get('addinteret', function () {return view('addinteret');});
+Route::post('/addinteret', [InterestController::class, 'add']) ->wherenumber('id')->name('store');
+
+
+
+Route::delete('interets/{interet}', [InterestController::class, 'delete'])->name('delete');
+
+
 
 
 
@@ -59,3 +77,8 @@ Route::get('/comment',function(){
 }); 
 
 Route::post('/comment', [CommentairesController::class,'add']);
+
+
+
+
+
