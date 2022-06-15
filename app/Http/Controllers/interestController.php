@@ -48,43 +48,9 @@ class InterestController extends Controller
                 return redirect('/interets')->with('votre intéret est supprimé');;
             }
 
+            public function update(Request $request){
+                
+            }
         }
-        // public function delete(Request $request ,$id) {
-
-
-        //     $interet = Interest::find($request->input($id));
-
-        //     $interet->delete();
-        //     return redirect('/interets');
-        
-        // public function show($id) {
-        //     $interet = Interest::find($id);
-        //     return view('update', [
-        //         'interest' => $interet,
-        //     ]);
-        // }
- 
-        // public function destroy($id)
-        // {
-        //     $interet = Interest::findOrFail($id);
-        //     $interet->delete();
-        
-        //     return redirect('/interets')->with('success', 'Intéret supprimer avec succèss');
-        // }
-
-    
-    
-        
-    
-
-            
-            
-    
-    
-
-    // rouge= variable que tu crée
-    // bleue= fonction que tu crée ou natif de laravel
-    // jaune = le model donc => la table en bdd 
-    // vert = variable qui récupere la variable r
-
+       
 
