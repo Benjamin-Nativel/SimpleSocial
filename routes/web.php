@@ -59,6 +59,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/', [PostController::class, 'getAllUser'])->name('suggestion');
 
+
 Route::get('/comment',function(){
     return view('comment');
 }); 
@@ -72,4 +73,5 @@ Route::get('/amis',[User_amisController::class, 'showamis'])->name('amis');
 
 Route::post('/amis/store',[User_amiscontroller::class, 'storeamis'])->name('amis.store');
 
+// Route::get('/{id}',[PostController::class, 'getProfile'])->whereNumber('id');
 

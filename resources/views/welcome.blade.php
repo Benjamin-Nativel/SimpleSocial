@@ -391,8 +391,10 @@
   <div class="sticky hidden py-1 md:block lg:block top-6">
 
   
+      {{-- @foreach ($infos as $info)
+                    <a href="/profile/{{ $info->id }}"> profile</a>
+                    @endforeach --}}
 @include('components.suggestion')
-
   <card class="rounded-lg shadow-lg w-96">
 
     <header class="px-5 py-4 text-2xl font-bold text-pink-600">
@@ -400,7 +402,7 @@
     </header>
 
     <main class="px-5">
-
+@foreach($user as $user)
       <content class="grid grid-cols-6">
 
         <div class="">
@@ -408,7 +410,7 @@
         </div>
 
         <div class="flex flex-col col-span-3 px-1 font-semibold">
-          <div class="text-sm"> Sangwa Albine </div>
+          <div class="text-sm">{{$user->name}} {{$user->prenom}} </div>
           <div class="font-light text-gray-700 text-xm"> 2 Amis Commun</div>
         </div>
 
@@ -419,7 +421,7 @@
         </div>
 
       </content>
-
+@endforeach
 
     </main>
 

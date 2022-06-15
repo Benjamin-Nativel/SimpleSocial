@@ -24,6 +24,7 @@
             </ul>
             <!-- Header Icons -->
             <div class="flex items-center space-x-5 md:ml-auto xl:flex">
+              
               <a class="hover:text-gray-200 " href="#">
                 <i class="fa-solid fa-user-group fa-2xl text-fuchsia-500"></i>
               </a>

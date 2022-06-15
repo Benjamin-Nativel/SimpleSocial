@@ -13,9 +13,13 @@ class PostController extends Controller
 
    $Users = User::wherenotin('id',[])->inRandomOrder()->limit(4)->get();
 
+   
+
     return view('/welcome',[
 
         'user' => $Users,
+
+        
        
     
     
@@ -24,5 +28,13 @@ class PostController extends Controller
 
   
     }
+
+    // public function getProfile($id){
+    //     $infos=User::find($id);
+    //     return view('/welcome',[
+    //         'infos'=>$infos
+    //     ]);
+    // }
+
 
 }
