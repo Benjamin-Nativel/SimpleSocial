@@ -11,10 +11,11 @@ class PostController extends Controller
 {
     // Selectionner des données
 
-   $Users = User::wherenotin('id',[])->inRandomOrder()->limit(5)->get();
+   $Users = User::wherenotin('id',[])->inRandomOrder()->limit(4)->get();
 
-    return view('/suggestion',[
-        'users' => $Users,
+    return view('/welcome',[
+
+        'user' => $Users,
        
     
     

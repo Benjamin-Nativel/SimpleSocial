@@ -56,7 +56,7 @@ Route::get('/login', [AuthController::class, 'getLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('auth:ADMIN');
 
 
-Route::get('/suggestion', [PostController::class, 'getAllUser'])->name('suggestion');
+Route::get('/', [PostController::class, 'getAllUser'])->name('suggestion');
 
 Route::get('/comment',function(){
     return view('comment');
@@ -68,4 +68,7 @@ Route::post('/comment', [CommentairesController::class,'add']);
 
 // Route::get('/welcome'),[]
 Route::get('/amis',[User_amisController::class, 'showamis'])->name('amis');
+
 Route::post('/amis/store',[User_amiscontroller::class, 'storeamis'])->name('amis.store');
+
+
