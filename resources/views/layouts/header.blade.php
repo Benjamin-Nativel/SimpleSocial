@@ -24,6 +24,7 @@
             </ul>
             <!-- Header Icons -->
             <div class="flex items-center space-x-5 md:ml-auto xl:flex">
+              
               <a class="hover:text-gray-200 " href="#">
                 <i class="fa-solid fa-user-group fa-2xl text-fuchsia-500"></i>
               </a>
@@ -34,6 +35,9 @@
               <a class="flex items-center hover:text-gray-200" href="#">
                 <i class="fa-solid fa-paper-plane fa-2xl"></i>
               </a>
+              @if(Auth::check())
+              <a class="flex items-center hover:text-gray-200" href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+              @endif
               
             </div>
           </div>

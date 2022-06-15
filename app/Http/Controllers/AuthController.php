@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
 class AuthController extends Controller
@@ -66,5 +67,12 @@ class AuthController extends Controller
         }
 
         return view('login');
+}
+public function logout(Request $request)
+{
+    Session::flush();
+    Auth::logout();
+    $request->session()->invalidate();
+    return redirect('/login');
 }
 }

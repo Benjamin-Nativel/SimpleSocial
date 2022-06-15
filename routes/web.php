@@ -50,6 +50,7 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/login', [AuthController::class, 'getLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/suggestion', [PostController::class, 'getAllUser'])->name('suggestion');
 
