@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentairesController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\User_amisController;
+use App\Http\Controllers\interestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,11 @@ use Illuminate\Support\Facades\Route;
 */Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/interets', function () {
+    return view('interets');
+});
+
 
 Route::get('/test',function(){
     return view('test');
@@ -47,3 +53,26 @@ Route::post('/comment', [CommentairesController::class,'add']);
 
 Route::get('/amis',[User_amisController::class, 'showamis'])->name('amis');
 Route::post('/amis/store',[User_amiscontroller::class, 'storeamis'])->name('amis.store');
+});
+
+Route::get('interets', [interestController::class, 'getAll'] );
+
+Route::get('read/{id}', [interestController::class, 'show']) ->wherenumber('id')->name('read');
+
+Route::get('addinteret', function () {return view('addinteret');});
+Route::post('/addinteret', [InterestController::class, 'add']) ->wherenumber('id')->name('store');
+
+
+
+Route::delete('interets/{interet}', [InterestController::class, 'delete'])->name('delete');
+
+
+
+
+
+
+
+
+
+
+
